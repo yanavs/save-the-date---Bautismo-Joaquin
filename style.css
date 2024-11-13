@@ -1,0 +1,136 @@
+/* Resetear márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Asegurar que el body no tenga desplazamiento horizontal ni margen */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    margin: 0; /* Evita el margen predeterminado del body */
+    padding: 0; /* Evita el padding predeterminado del body */
+}
+
+/* Primera imagen - Sección 1 */
+.uno {
+    width: 100%; /* El contenedor ocupa todo el ancho */
+    
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    align-items: center; /* Centra la imagen */
+    position: relative;
+    overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+/* Imagen en la primera sección */
+.uno img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+/* Segunda imagen - Fondo para botones */
+.dos {
+    width: 100%; /* El contenedor ocupa todo el ancho */
+   
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    align-items: center; /* Centra la imagen */
+    position: relative;
+    overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+/* Imagen en la segunda sección */
+.dos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+/* Estilo de los botones en la segunda sección */
+.botones {
+    z-index: 2; /* Asegura que los botones estén por encima de la imagen */
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center; /* Centra los botones verticalmente */
+    gap: 70px; /* Añade espacio entre los botones */
+    position: absolute; /* Los coloca sobre la imagen */
+}
+
+/* Estilo para los botones */
+.botones button {
+    padding: 5px 15px;
+    font-size: 18px;
+    background-color: rgba(180, 166, 104); /* Fondo oscuro semi-transparente */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.botones button:hover {
+    background-color: rgb(151, 139, 87);;
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el ratón */
+}
+
+/* Tercera imagen - Sección 1 */
+.tres {
+    width: 100%; /* El contenedor ocupa todo el ancho */
+    
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    align-items: center; /* Centra la imagen */
+    position: relative;
+    overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+/* Imagen en la primera sección */
+.tres img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+
+/* Tercera imagen - Sección 1 */
+.cuatro {
+    width: 100%; /* El contenedor ocupa todo el ancho */
+    
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    align-items: center; /* Centra la imagen */
+    position: relative;
+    overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+/* Imagen en la primera sección */
+.cuatro img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+.cuatro .botones {
+    position: absolute;
+    top: 20px; /* El botón está 20px desde la parte superior de la imagen */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal */
+    z-index: 2; /* Asegura que los botones estén por encima de la imagen */
+}
+/* Responsividad: Ajustes para pantallas pequeñas */
+@media (max-width: 600px) {
+   
+    .botones button {
+        margin: 10px 0;
+        font-size: 16px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+    }
+}
