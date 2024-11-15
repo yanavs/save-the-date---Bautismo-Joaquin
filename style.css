@@ -67,6 +67,7 @@ body {
     padding: 5px 15px;
     font-size: 18px;
     background-color: rgba(180, 166, 104); /* Fondo oscuro semi-transparente */
+    font-family: "Cantarell", sans-serif;
     color: white;
     border: none;
     cursor: pointer;
