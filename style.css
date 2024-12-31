@@ -52,19 +52,43 @@ body {
 }
 
 /* Estilo de los botones en la segunda sección */
+/* Estilo de los botones en la segunda sección */
 .botones {
     z-index: 2; /* Asegura que los botones estén por encima de la imagen */
-    text-align: center;
+    text-align: right;
     display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    align-items: center; /* Centra los botones verticalmente */
-    gap: 70px; /* Añade espacio entre los botones */
+    flex-direction: column; /* Cambiar la dirección de los botones a columna */
+    justify-content: center; /* Centra los botones verticalmente */
+    align-items: flex-end; /* Alinea los botones a la derecha */
+    gap: 27%; /* Espacio entre los botones */
     position: absolute; /* Los coloca sobre la imagen */
+    right: 20px; /* Alinea los botones hacia la derecha con un margen */
+  
 }
+
+.botones a {
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-bottom: 0px; /* Espacio entre las imágenes */
+}
+
+/* Estilo de las imágenes (puedes ajustar el tamaño según lo necesites) */
+.botones img {
+    width: 7%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    cursor: pointer; /* Muestra el puntero cuando pasa sobre la imagen */
+    transition: transform 0.3s ease; /* Añade un efecto al pasar el ratón */
+    margin-bottom: 3%;
+}
+
+/* Efecto hover para la imagen */
+.botones img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen cuando se pasa el ratón */
+}
+
 
 /* Estilo para los botones */
 .botones button {
-    padding: 5px 15px;
+    padding: 0px;
     font-size: 18px;
     background-color: rgba(180, 166, 104); /* Fondo oscuro semi-transparente */
     font-family: "Cantarell", sans-serif;
@@ -72,7 +96,7 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: reboteContinuo 1.5s infinite; 
 }
 
 /* Efecto hover para los botones */
@@ -126,7 +150,14 @@ body {
     left: 50%;
     transform: translateX(-50%); /* Centrado horizontal */
     z-index: 2; /* Asegura que los botones estén por encima de la imagen */
+ 
+
+
+
 }
+
+
+
 /* Responsividad: Ajustes para pantallas pequeñas */
 @media (max-width: 600px) {
    
